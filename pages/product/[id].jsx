@@ -85,7 +85,7 @@ const Product = ({burger}) => {
   );
 };
 export const getServerSideProps = async({params})=>{
-  const res =await axios.get(`http://localhost:3000/api/product/${params.id}`);
+  const res =await axios.get(`https://burgergate.vercel.app/api/product/${params.id}`);
   return{
     props:{
       burger: res.data,

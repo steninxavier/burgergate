@@ -22,7 +22,7 @@ export default function Home({Productlistr}) {
   )
 }
 export const getServerSideProps = async()=>{
-  const res =await axios.get("http://localhost:3000/api/product");
+  const res =await axios.get("https://burgergate.vercel.app/api/product");
   return{
     props:{
       Productlistr: res.data,
