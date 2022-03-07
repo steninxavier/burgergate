@@ -1,0 +1,12 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/product/[id]": "pages/api/product/[id].js",
+  "/api/product": "pages/api/product.js",
+  "/cart": "pages/cart.html",
+  "/": "pages/index.js",
+  "/orders/[Id]": "pages/orders/[Id].html",
+  "/product/[id]": "pages/product/[id].js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
