@@ -2,9 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import styles from '../../styles/Product.module.css'
 import { useState } from 'react'
-import axios from 'axios'
+import { axiosInstance } from '../../config'
 import {useDispatch} from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
+
 const Product = ({burger}) => {
     const [size, setSize] = useState(0);
     const[price,setPrice] =useState(burger.prices[0]);
@@ -85,7 +86,7 @@ const Product = ({burger}) => {
   );
 };
 export const getServerSideProps = async({params})=>{
-  const res =await axios.get(`https://burgergate.netlify.app/api/product/${params.id}`);
+  const res =await axiosInstance.get(`/api/product/${params.id}`);
   return{
     props:{
       burger: res.data,

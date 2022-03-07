@@ -5,7 +5,7 @@ import Footer from '../component/Footer'
 import Navbar from '../component/Navbar'
 import Featured from '../component/Featured'
 import Productlist from '../component/Productlist'
-import axios from 'axios'
+import {axiosInstance} from '../config'
 
 export default function Home({Productlistr}) {
   return (
@@ -22,7 +22,7 @@ export default function Home({Productlistr}) {
   )
 }
 export const getServerSideProps = async()=>{
-  const res =await axios.get("https://burgergate.netlify.app/api/product");
+  const res =await axiosInstance.get("/api/product");
   return{
     props:{
       Productlistr: res.data,
