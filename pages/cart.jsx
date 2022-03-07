@@ -66,7 +66,7 @@ const Cart = () => {
         <div className={styles.totalText}>
           <b className={styles.totalTextTitle}>Total:</b>€{cart.total}
         </div>
-        <Link href="/orders/4">
+        <Link href="/orders/4" passHref>
         <button className={styles.button}>CHECKOUT NOW!</button>
         </Link>
       </div>

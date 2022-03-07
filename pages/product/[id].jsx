@@ -5,12 +5,12 @@ import { useState } from 'react'
 import axios from 'axios'
 import {useDispatch} from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
-const product = ({burger}) => {
+const Product = ({burger}) => {
     const [size, setSize] = useState(0);
     const[price,setPrice] =useState(burger.prices[0]);
     const[extras,setExtras] = useState([]);
     const [quantity,setQuantity] = useState(1)
-    const dispatch= useDispatch();
+    const Dispatch= useDispatch();
 
     const changePrice =(number)=>{
       setPrice(price+ number)
@@ -32,7 +32,7 @@ const product = ({burger}) => {
     }
   };
   const handleClick=()=>{
-   dispatch(addProduct({...burger,extras,price,quantity}))
+   Dispatch(addProduct({...burger,extras,price,quantity}))
   }
   
   return (
@@ -93,4 +93,4 @@ export const getServerSideProps = async({params})=>{
   };
 };
 
-export default product;
+export default Product;
