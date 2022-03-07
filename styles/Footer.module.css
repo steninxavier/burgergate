@@ -1,0 +1,33 @@
+.container{
+    background-color: blanchedalmond;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px 0px 40px;
+}
+.address{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.text{
+    width: 50%;
+    font-weight: bold;
+}
+.title{
+    text-align: center;
+    color: brown;
+}
+.motto{
+    font-size: 33px;
+    font-weight: bold;
+    color: darkred;
+}
+@media screen and (max-width: 480px) {
+    .item{
+        display: flex;
+        flex-direction: column;
+    }
+}
