@@ -31,6 +31,6 @@ export default function Home({Productlistr}) {
 //   }
 // };
 
-axios.get(`${NEXT_URL}/api/product`).then((response)=>
+axios.get("api/product").then((response)=>
 console.log(response.data)
 )
