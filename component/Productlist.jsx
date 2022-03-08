@@ -3,7 +3,6 @@ import styles from '../styles/Productlist.module.css'
 import Productcard from './Productcard'
 
 const Productlist = ({Productlist}) => {
-  console.log("productlist");
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>THE BEST BURGER IN TOWN</h1>
