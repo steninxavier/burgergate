@@ -18,19 +18,17 @@ export default function Home({Productlistr}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured/>
-      {/* <Productlist Productlist={Productlistr}/> */}
+      <Productlist Productlist={Productlistr}/>
     </div>
   )
 }
-// export const getServerSideProps = async()=>{
-//   const res =await axios.get(`${NEXT_URL}/api/product`);
-//   return{
-//     props:{
-//       Productlistr: res.data,
-//     }
-//   }
-// };
+export const getServerSideProps = async()=>{
+  const res =await axios.get(`${NEXT_URL}api/product`);
+  return{
+    props:{
+      Productlistr: res.data,
+    }
+  }
+};
 
-axios.get("api/product").then((response)=>
-console.log(response.data)
-)
+
