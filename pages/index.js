@@ -6,6 +6,7 @@ import Navbar from '../component/Navbar'
 import Featured from '../component/Featured'
 import Productlist from '../component/Productlist'
 import axios from 'axios'
+import { NEXT_URL } from '../config'
 
 export default function Home({Productlistr}) {
   return (
@@ -22,7 +23,7 @@ export default function Home({Productlistr}) {
   )
 }
 export const getServerSideProps = async()=>{
-  const res =await axios.get("http://localhost:3000/api/product");
+  const res =await axios.get(`${NEXT_URL}/api/product`);
   return{
     props:{
       Productlistr: res.data,

@@ -5,6 +5,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import {useDispatch} from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
+import { NEXT_URL } from '../../config'
 const Product = ({burger}) => {
     const [size, setSize] = useState(0);
     const[price,setPrice] =useState(burger.prices[0]);
@@ -85,7 +86,7 @@ const Product = ({burger}) => {
   );
 };
 export const getServerSideProps = async({params})=>{
-  const res =await axios.get(`http://localhost:3000/api/product/${params.id}`);
+  const res =await axios.get(`${NEXT_URL}/api/product/${params.id}`);
   return{
     props:{
       burger: res.data,
