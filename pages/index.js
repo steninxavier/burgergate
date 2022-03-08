@@ -23,7 +23,7 @@ export default function Home({Productlistr}) {
   )
 }
 export const getServerSideProps = async()=>{
-  const res =await axios.get(`${NEXT_URL}api/product`);
+  const res =await axios.get(`${NEXT_URL}/api/product`);
   return{
     props:{
       Productlistr: res.data,

@@ -21,7 +21,7 @@ function Navbar() {
             <div className={styles.item}>
             <ul className={styles.list}>
             <li className={styles.listItem}>
-               <Link href="/#">Homepage</Link> 
+               <Link href="/">Homepage</Link> 
                 </li>
             <li className={styles.listItem}>Products</li>
             <li className={styles.listItem}>Menu</li>

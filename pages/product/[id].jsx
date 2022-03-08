@@ -86,7 +86,7 @@ const Product = ({burger}) => {
   );
 };
 export const getServerSideProps = async({params})=>{
-  const res =await axios.get(`${NEXT_URL}api/product/${params.id}`);
+  const res =await axios.get(`${NEXT_URL}/api/product/${params.id}`);
   return{
     props:{
       burger: res.data,
